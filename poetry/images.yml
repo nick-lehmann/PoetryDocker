@@ -1,0 +1,35 @@
+---
+fish-pepper:
+  params:
+    - "version"
+    - "os"
+    - "poetry"
+  name: "nicklehmann/poetry"
+  build: 2
+
+maintainer: "Nick Lehmann <nick@lehmann.sh>"
+
+config:
+  version:
+    2.7:
+      python: "2.7"
+    3.5:
+      python: "3.5"
+    3.6:
+      python: "3.6"
+    3.7:
+      python: "3.7"
+    3.8:
+      python: "3.8"
+  os:
+    alpine:
+      base: "alpine"
+    ubuntu:
+      base: "ubuntu"
+    debian:
+      base: "buster"
+  poetry:
+    preview:
+      version: "1.0.0b9"
+    latest:
+      version: "0.12.17"

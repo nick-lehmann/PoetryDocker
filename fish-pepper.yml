@@ -1,0 +1,6 @@
+---
+fish-pepper:
+   registry: "docker.io"
+   repoUser: "nicklehmann"
+
+maintainer: "Nick Lehmann <nick@lehmann.sh>"

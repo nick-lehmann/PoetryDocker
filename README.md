@@ -11,8 +11,14 @@ Normal installation
 
 Instead of downloading the installation script from the internet and executing it, `poetry` is installed manually using `virtualenv` and `pip`. I am not a fan of piping content from the internet in my build scripts / CI and decided against that. Furthermore, it is not totally clear to me what the `get-poetry.py` does. Therefore, installing it like any other python CLI tool is much more clear to me.
 
+
 Virtualenv
 ----------
 
 In this image, `poetry` installs dependencies into the system `site-packages`. There is no point in creating virtualenvs inside docker containers. While some might argue that this is a more natural flow for experienced python programmers, for me this is just the case if you also work with normal virtualenvs. Because I try to use docker containers everywhere, installing everything at system level makes more sense and the integration with tools like `PyCharm` easier.
 
+
+Contribute
+==========
+
+If you want to generate all dockerfiles after having made a change, execute the `generate.sh` script. It will invoke `fish-pepper` as a docker container, generate the dockerfiles and move them to the top-level directory.
