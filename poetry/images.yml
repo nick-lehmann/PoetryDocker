@@ -24,8 +24,6 @@ config:
   os:
     alpine:
       base: "alpine"
-    stretch:
-      base: "stretch"
     buster:
       base: "buster"
   poetry:
