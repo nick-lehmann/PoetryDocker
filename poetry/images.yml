@@ -24,8 +24,6 @@ config:
   os:
     alpine:
       base: "alpine"
-    buster:
-      base: "buster"
   poetry:
     preview:
       version: "1.0.0b9"
