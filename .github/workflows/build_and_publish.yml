@@ -9,7 +9,7 @@ jobs:
       matrix:
         python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
         poetry-version: ["latest", "preview"]
-        os: ["alpine", "ubuntu", "buster"]
+        os: ["alpine", "stretch", "buster"]
     steps:
     - uses: actions/checkout@v1
     - name: Build and publish

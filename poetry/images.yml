@@ -24,9 +24,9 @@ config:
   os:
     alpine:
       base: "alpine"
-    ubuntu:
-      base: "ubuntu"
-    debian:
+    stretch:
+      base: "stretch"
+    buster:
       base: "buster"
   poetry:
     preview:
