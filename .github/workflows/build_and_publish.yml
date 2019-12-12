@@ -21,4 +21,4 @@ jobs:
         DOCKER_IMAGE_NAME: nicklehmann/poetry
         DOCKER_IMAGE_TAG: py${{ matrix.python-version }}-${{ matrix.poetry-version }}-${{ matrix.os }}
       with:
-        args: -f ${{ matrix.python-version }}/${{ matrix.os }}/${{ matrix.poetry-version }}/Dockerfile
+        args: -f ${{ matrix.python-version }}/${{ matrix.os }}/${{ matrix.poetry-version }}/Dockerfile ${{ matrix.python-version }}/${{ matrix.os }}/${{ matrix.poetry-version }}
