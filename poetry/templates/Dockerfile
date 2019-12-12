@@ -25,7 +25,7 @@ RUN cd /opt && \
     ln -s $(pwd)/poetry/bin/poetry /usr/bin/poetry && \
     deactivate && \
     pip uninstall virtualenv -y && \
-    poetry config virtualenvs.create false
+    poetry config virtualenvs.create false || poetry config settings.virtualenvs.create false
 
 # Needed to make poetry install your dependencies in your system python
 ENV VIRTUAL_ENV=/usr/bin/python
