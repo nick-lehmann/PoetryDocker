@@ -1,0 +1,24 @@
+name: Build docker images
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+        poetry-version: ["latest", "preview"]
+        os: ["alpine", "ubuntu", "buster"]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and publish
+      uses: pangzineng/Github-Action-One-Click-Docker@v1.1.1
+      env:
+        DOCKER_USERNAME: nicklehmann
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        BRANCH_FILTER: master
+        DOCKER_IMAGE_NAME: nicklehmann/poetry
+        DOCKER_IMAGE_TAG: py${{python-version}}-${{poetry-version}}-${{os}}
+      with:
+        args: -f ${{python-version}}/${{os}}/${{poetry-version}}/Dockerfile
